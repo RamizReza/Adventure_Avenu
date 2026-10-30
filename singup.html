@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./brostrap/css/bootstrap.min.css">
+    <title>Creat an Account | AdventureAvenu</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/Logo/6-61387_travel-euclidean-vector-royalty-free-clip-art-travel (1).png">
+  
+</head>
+<style>
+   body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.signup-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 25px 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+    text-align: center;
+    border-radius: 6px;
+}
+
+h1 {
+    color: darkcyan;
+    margin-bottom: 10px;
+}
+
+p {
+    color: darkcyan;
+    margin-bottom: 20px;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+    margin-left: 10px;
+}
+input[type="radio"]:first-of-type {
+    margin-left: 0;
+}
+
+.gender-options {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 5px;
+}
+.gender-options label {
+    display: inline;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.submit-button {
+    margin-top: 20px;
+}
+
+.search-button {
+    width: 100%;
+    padding: 10px;
+    background-color: darkcyan;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.search-button:hover {
+    background-color: #1c71d8;
+}
+
+#signupAlert {
+    display: none;
+    margin-bottom: 15px;
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+}
+.alert-error {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+.alert-success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+</style>
+
+<body>
+    <div class="signup-form">
+        <h1 style="color: darkcyan;">Sign Up</h1>
+        <p style="color: darkcyan;">It's Quick and Easy</p>
+
+        <div id="signupAlert"></div>
+
+        <form id="signupForm" onsubmit="handleSignupSubmit(event)">
+            <div class="input-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email or Phone number:</label>
+                <input type="text" id="email" name="email" placeholder="Enter your email or phone number" required>
+            </div>
+
+            <div class="input-group">
+                <div class="name-group" style="display: flex; gap: 10px;">
+                    <div style="flex: 1;">
+                        <label for="firstname">First Name:</label>
+                        <input type="text" id="firstname" name="firstname" placeholder="First Name">
+                    </div>
+                    <div style="flex: 1;">
+                        <label for="lastname">Last Name:</label>
+                        <input type="text" id="lastname" name="lastname" placeholder="Last Name">
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="Password">Password:</label>
+                <input type="password" id="Password" name="password" placeholder="Password (min 6 characters)" required minlength="6">
+            </div>
+
+            <div class="input-group">
+                <p style="text-align: left; margin-bottom: 5px; color: #333;">Gender:</p>
+                <div class="gender-options">
+                    <input type="radio" name="gender" id="male" value="Male">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="Female">
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="other" value="Other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <p style="text-align: left; margin-bottom: 5px; color: #333;">Country:</p>
+                <select name="country" id="country">
+                    <option value="">-- Select a country --</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="United States">United States</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Canada">Canada</option>
+                    <option value="France">France</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Japan">Japan</option>
+                    <option value="India">India</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Australia">Australia</option>
+                    <option value="United Arab Emirates">United Arab Emirates</option>
+                    <option value="Maldives">Maldives</option>
+                    <option value="Thailand">Thailand</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <p style="text-align: left; margin-bottom: 5px; color: #333;">Birth date: 
+                    <input type="date" name="birth_date" id="birth_date" style="margin-top: 5px;">
+                </p>
+            </div>
+
+            <p style="font-size: 12px; color: #666; line-height: 1.4;">
+                By clicking Sign Up, you agree to our Terms, Privacy Policy, and Cookies Policy. You may receive SMS notifications from us and can opt out at any time.
+            </p>
+
+            <div class="submit-button">
+                <input type="submit" id="signupSubmitBtn" class="search-button" value="Sign Up" />
+            </div>
+        </form>
+
+        <p style="margin-top: 20px; font-size: 14px;">
+            <a href="./login.html" style="color: darkcyan; font-weight: bold; text-decoration: none;">Already have an account? Log In</a>
+        </p>
+    </div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script>
+const API_BASE = (window.location.protocol === 'file:' || (window.location.port !== '8000' && window.location.port !== ''))
+    ? 'http://localhost:8000'
+    : '';
+
+async function handleSignupSubmit(event) {
+    event.preventDefault();
+    const alertBox = document.getElementById('signupAlert');
+    const submitBtn = document.getElementById('signupSubmitBtn');
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const firstname = document.getElementById('firstname').value.trim();
+    const lastname = document.getElementById('lastname').value.trim();
+    const password = document.getElementById('Password').value;
+    const country = document.getElementById('country').value;
+    const birth_date = document.getElementById('birth_date').value;
+
+    const genderRadio = document.querySelector('input[name="gender"]:checked');
+    const gender = genderRadio ? genderRadio.value : '';
+
+    if (!name || !email || !password) {
+        showSignupAlert('Please fill in Name, Email/Phone, and Password.', 'error');
+        return;
+    }
+
+    if (password.length < 6) {
+        showSignupAlert('Password must be at least 6 characters.', 'error');
+        return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.value = 'Creating Account...';
+
+    const payload = {
+        name,
+        email,
+        firstname,
+        lastname,
+        password,
+        gender,
+        country,
+        birth_date
+    };
+
+    try {
+        const response = await fetch(`${API_BASE}/api/signup`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            credentials: 'include',
+            body: JSON.stringify(payload)
+        });
+
+        const data = await response.json();
+
+        if (response.ok && data.success) {
+            if (data.token) {
+                localStorage.setItem('adv_session_token', data.token);
+            }
+            showSignupAlert('Account created successfully! Redirecting to home...', 'success');
+            setTimeout(() => {
+                window.location.href = './home.html';
+            }, 1000);
+        } else {
+            showSignupAlert(data.error || 'Failed to create account. Please try again.', 'error');
+            submitBtn.disabled = false;
+            submitBtn.value = 'Sign Up';
+        }
+    } catch (err) {
+        console.error('Signup error:', err);
+        showSignupAlert('Could not connect to backend server. Please verify the server is running.', 'error');
+        submitBtn.disabled = false;
+        submitBtn.value = 'Sign Up';
+    }
+}
+
+function showSignupAlert(message, type) {
+    const alertBox = document.getElementById('signupAlert');
+    alertBox.textContent = message;
+    alertBox.className = type === 'success' ? 'alert-success' : 'alert-error';
+    alertBox.style.display = 'block';
+}
+</script>
+
+</html>

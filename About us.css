@@ -1,0 +1,103 @@
+*{ margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+header{
+    padding: 150px;
+    text-align: center;
+    color:rgb(0, 53, 0);
+    background-image: url(./Image/i-land.jpg);
+    height:80vh;
+    min-height: 100px;
+    background-size: 100%;
+}
+
+.header-content h2{
+   font-size: 70px;
+}
+.header-content p {
+    font-size: 30px;
+  
+}
+.mynav{
+    
+    overflow: hidden;
+    background-color: #023734;
+   
+ width: 1700px;
+    max-width: 1535px;
+    text-align: center;
+   
+ 
+ }
+ .mynav a{
+     color: aliceblue;
+     font-size: 20px;
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   text-decoration: none;
+   padding-left: 5px;
+   height: 20vh;
+ 
+ }
+ .navleft{
+     text-align: left;
+     padding-right: 50px;
+     
+     
+ }
+ .mynav  .navleft a:hover{
+    -webkit-text-stroke: 2px white;
+      color: transparent;
+    transition: all 0.5s ease;}
+.navright{
+    margin-right: 20px;
+    text-align: right;
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 3opx;
+}
+.mynav  .navright a:hover{
+    -webkit-text-stroke: 2px white;
+      color: transparent;
+    transition: all 0.5s ease;}
+
+section{
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px
+}
+.About{
+    
+
+
+    background-color: #f5f7fa;
+    border-radius: 20px;
+    padding: 24px 16px;
+    margin-bottom: 100px ;
+    max-width: 1500px;
+    
+}
+.mini{
+    text-align: left;
+}
+.paragraph{
+    text-align: left;
+    color: darkcyan;
+}
+.footer{
+    background-color: #021737;
+    border-radius: 20px;
+    padding: 10px 10px;
+    margin: 100px ;
+    max-width: 1500px;
+    text-align: center;
+   
+  }
+  .copyright{
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    
+  }
+ 

@@ -1,0 +1,357 @@
+*{
+    list-style-type: none;
+}
+
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+  
+    color: #fff;
+    padding: 10px 0;
+
+    text-align: center;
+   
+    background-image: url(./Image/pexels-jimmy-teoh-1010657.jpg);
+    height:80vh;
+  
+    background-size: cover;
+}
+
+nav{
+    height: 20vh;
+}
+nav ul {
+    padding-top: 2px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav a:active{
+    border-bottom: solid 3px white;
+
+}
+
+nav a:hover {
+    -webkit-text-stroke: 2px white;
+      color: transparent;
+    transition: all 0.5s ease;}
+.head{
+    padding-top: 80px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.head h1 {
+    font-size: 2.5em;
+}
+.head a :hover{
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+  transition: all 0.5s ease;  
+}
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:darkblue;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: 2px outset white;
+    
+}
+
+.hero {
+    text-align: center;
+justify-content: center;
+  
+    padding: 10px 0px;
+    background-color:transparent ;
+   
+    margin-left: 200px ;
+    margin-right: 100px;
+    max-width: 1000px;
+    color: #0f2d5a;
+}
+.container {
+    display: flex;
+    justify-content: center;
+  
+    margin: auto;
+  
+   
+  
+}
+
+form {
+  margin: auto;
+   
+}
+
+input[type="text"], input[type="date"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 2px outset rgb(15, 15, 155) ;/* Add your desired border color */
+    box-shadow: #184fa0;
+}
+
+.search-button {
+    padding: 10px;
+    background-color: #d3d4d3; /* Add your desired button color */
+    color:darkblue;
+    border: 2px outset rgb(15, 15, 155);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ads {
+    text-align: center; /* Center the ads horizontally */
+    margin-top: 50px;
+}
+
+.ads-img {
+    white-space: nowrap; /* Prevent line breaks between the images */
+}
+
+.img {
+    display: inline-block; /* Display images side by side */
+    margin: 10px; /* Add some spacing between images */
+}
+
+.img img {
+    max-width: 100%; /* Ensure images don't exceed the container width */
+    height: auto; /* Maintain the aspect ratio of the images */
+}
+
+.planner{
+    background-color: #f5f7fa;
+    border-radius: 20px;
+    padding: 24px 16px;
+    margin: 100px ;
+    max-width: 1500px;
+    border:2px outset #0f2d5a;
+   
+  
+}
+.max{
+    text-align: center;
+    color: darkblue;
+}
+.content {
+    display: flex; /* Use flexbox to create a horizontal layout */
+    padding-top: 70px;
+}
+
+.paragraph {
+    flex: 1; /* Make each paragraph equally share the available space */
+    margin: 10px; /* Add some spacing between paragraphs */
+    padding-left: 20px;
+}
+.destinations {
+    text-align: center;
+
+
+
+    background-color: #f5f7fa;
+    border-radius: 20px;
+    padding: 24px 16px;
+    margin: 100px ;
+    max-width: 1500px;
+    border:2px outset #0f2d5a;
+   
+}
+
+.destinations h2 {
+    font-size: 30px;
+    color: #062149;
+
+}
+
+.destination-buttons {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: transparent;
+    float: left;
+}
+
+.destination-button {
+    padding: 8px 15px;
+    margin: 0 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.destination-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.destination-image {
+    margin: 10px;
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.review-section{
+    text-align: center;
+    border:2px solid #021737;
+    border-radius: 20px;
+    background-color: #f5f7fa ;
+    padding: 24px 16px;
+    margin-bottom: 50px;
+    margin-left: 100px ;
+    margin-right: 100px;
+    max-width: 1500px;
+    color: #0f2d5a;
+}
+.review-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.review {
+    text-align: center;
+    max-width: 300px;
+}
+
+.review img {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 50%;
+}
+
+.review p {
+    margin: 10px 0;
+}
+
+.review h3 {
+    color: #333;
+}
+
+
+
+.booking-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+
+.newsletter {
+    text-align: center;
+    text-align: center;
+    border-top:2px solid #021737;
+    border-left:2px solid #021737;
+    border-right:2px solid #021737;
+    background-color: #f5f7fa ;
+    padding: 24px 16px;
+    margin-left: 100px ;
+    margin-right: 100px;
+    max-width: 1500px;
+    color: #0f2d5a;
+    border-left:2px solid #021737;
+    border-right:2px solid #021737;
+    background-color: #f5f7fa ;
+    padding: 24px 16px;
+    margin-left: 100px ;
+    margin-right: 100px;
+    max-width: 1500px;
+    color: #0f2d5a;
+    
+}
+.newsletter h1{
+    padding-bottom: 30px;
+}
+.newsletter p{
+padding-top: 30px;
+}
+
+
+.about{
+    background-color: #f5f7fa;
+    padding: 24px 16px;
+    margin-left: 100px ;
+    margin-right: 100px;
+    max-width: 1500px;
+    border-left:2px solid #021737;
+    border-right:2px solid #021737;
+ 
+  }
+  .footer-cls {
+    display: flex;
+    align-content: center;
+    /* align-items: center; */
+    justify-content: space-around;
+}
+
+  .friut {
+    display: flex; /* Use flexbox to create a horizontal layout */
+    padding-top: 70px;
+    color: #041d43;
+}
+
+.paragraph {
+    flex: 1; /* Make each paragraph equally share the available space */
+    margin: 10px; /* Add some spacing between paragraphs */
+    padding-left: 60px;
+    font-size: 15px;
+}
+.iteam{
+    text-decoration: none;
+    color: #0f2d5a;
+    
+}
+.contact{
+    background-color: #f5f7fa;
+    padding: 24px 16px;
+    margin-left: 100px ;
+    margin-right: 100px;
+    max-width: 1500px;
+    border-left:2px solid #021737;
+    border-right:2px solid #021737;
+    border-bottom:2px outset #021737;
+}
+.footer{
+    background-color: #021737;
+   border-radius: 20px;
+    padding: 10px 10px;
+    margin-left: 100px ;
+    margin-right: 100;
+    max-width: 1500px;
+    text-align: center;
+   
+  }
+  .copyright{
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    
+  }
+/* Add more styling and content as needed */
